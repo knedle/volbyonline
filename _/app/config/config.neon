@@ -1,0 +1,66 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+common:
+	parameters:
+		defaultVolby: prezident2013
+		twitter:
+			ACCOUNT_KEY: 'ACCOUNT_KEY'
+			ACCOUNT_SECRET: 'ACCOUNT_SECRET'
+			CONSUMER_KEY: 'CONSUMER_KEY'
+			CONSUMER_SECRET: 'CONSUMER_SECRET'
+		prezident2013:
+			typ: prezident # bude nekolik typu
+			volbyUrl: 'http://volby.cz/pls/prez2013/pe2?xjazyk=CZ'
+#			volbyUrl: http://localhost/volbyUrl.htm
+			tagZpracovano: "td[headers=r12 s1a1 s1b3]" # presny identifikator bunky s procentem zpracovani
+			tagUcast: "td[headers=r12 s1a4]" # presny identifikator bunky s procentem ucasti
+			tagOsoby: "td.postupujici" # attr class
+			attrJmenoOsoby: "s2a1 s2b2" # attr headers
+			attrProcentaOsoby: "s2a6 s2b6" # attr headers
+			k1: "MZ" # kandidat 1 Milos Zeman - PODLE PORADI V TABULCE
+			k2: "KS" # kandidat 2 Karel Schwarzenberg
+			table: prezident2kolo
+			publikovat: 5 # kazdych 5 procent
+			startDen: "26.01.2013"
+			startCas: "14:00"
+			title: 'Prezident republiky 2013 - 2 kolo'
+			subtitle: 'Miloš Zeman (MZ) vs Karel Schwarzenberg (KS)'
+
+	php:
+		date.timezone: Europe/Prague
+		# zlib.output_compression: yes
+
+	nette:
+		application:
+			errorPresenter: Error
+
+		database:
+			dsn: 'mysql:host=localhost;dbname=twittervolby'
+			user: root
+			password:
+
+		session:
+			expiration: 14 days
+
+
+	services:
+		authenticator: Authenticator
+		routerFactory: RouterFactory
+		router: @routerFactory::createRouter
+
+		database: @Nette\Database\Connection
+
+		prezident:
+			factory: @database::table(prezident2kolo)
+
+
+	factories:
+
+
+production < common:
+
+development < common:

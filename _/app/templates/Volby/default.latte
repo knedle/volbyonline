@@ -1,0 +1,51 @@
+{block content}
+	<table class='table table-condensed table-xhover table-bordered table-striped'>
+		<tr>
+			<th>datum</th>
+			<th>čas</th>
+			<th>zpracováno</h>
+			<th>účast</th>
+			<th>{$k1}</th>
+			<th>{$k2}</th>
+		</tr>
+		<tr n:foreach="$data as $row" n:class="$row->tweet==1 ? info" {if $row->tweet==1} title='tweetnuto'{/if}>
+			<td>{$row->datumcas|date:'%d.%m.%Y'}</td>
+			<td>{$row->datumcas|date:'%H:%M.%S'}</td>
+			<td>{$row->zpracovano}%</td>
+			<td>{$row->ucast}%</td>
+				{var $k2Class = ''}
+				{var $k1Class = ''}						
+			{if $row->kandidat1 > $row->kandidat2 }	
+				{var $k1Class = 'success'}
+				{var $k2Class = 'error'}
+			{elseif $row->kandidat1  < $row->kandidat2}
+				{var $k2Class = 'success'}
+				{var $k1Class = 'error'}			
+			{/if}
+			<td class='{$k1Class}'>{$row->kandidat1}%</td>
+			<td class='{$k2Class}'>{$row->kandidat2}%</td>
+		</tr>
+	</table>
+
+
+	<div class="alert alert-info">
+	  <strong>INFO</strong> Modře podbarvený řádek jsou data, která byla publikována na twitter účtu 
+	  <a href="http://twitter.com/volbyonline">@volbyonline</a>
+	</div>
+
+{/block}
+
+{block head}
+<style>
+.table tr td, .table tr th  {
+	text-align: center;
+}
+
+.table tbody tr td.success {
+	background-color: #dff0d8;
+}
+.table tbody tr td.error {
+	background-color: #f2dede;
+}
+</style>
+{/block}
