@@ -1,24 +1,27 @@
-<?php //netteCache[01]000381a:2:{s:4:"time";s:21:"0.75204200 1359204761";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:59:"D:\wamp\www\volbyonline\_\app\templates\Volby\default.latte";i:2;i:1359148426;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
+<?php //netteCache[01]000383a:2:{s:4:"time";s:21:"0.49230200 1382666005";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:61:"D:\wamp\www\volbyonline\_\app\templates\Volby\parlament.latte";i:2;i:1382666004;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
 
-// source file: D:\wamp\www\volbyonline\_\app\templates\Volby\default.latte
+// source file: D:\wamp\www\volbyonline\_\app\templates\Volby\parlament.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '9k76g71e3q')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '6q9s62mmez')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block content
 //
-if (!function_exists($_l->blocks['content'][] = '_lb0bbad237fc_content')) { function _lb0bbad237fc_content($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['content'][] = '_lb293135d6ee_content')) { function _lb293135d6ee_content($_l, $_args) { extract($_args)
 ?>	<table class='table table-condensed table-xhover table-bordered table-striped'>
 		<tr>
 			<th>datum</th>
 			<th>čas</th>
 			<th>zpracováno</h>
 			<th>účast</th>
-			<th><?php echo Nette\Templating\Helpers::escapeHtml($k1, ENT_NOQUOTES) ?></th>
-			<th><?php echo Nette\Templating\Helpers::escapeHtml($k2, ENT_NOQUOTES) ?></th>
+
+<?php $iterations = 0; foreach ($strany as $stranaId => $stranaNazev): ?>
+			<th><?php echo Nette\Templating\Helpers::escapeHtml($stranaNazev, ENT_NOQUOTES) ?></th>
+<?php $iterations++; endforeach ?>
+
 		</tr>
 <?php $iterations = 0; foreach ($data as $row): ?>		<tr <?php if ($row->tweet==1): ?>
  title='tweetnuto'<?php endif ;if ($_l->tmp = array_filter(array($row->tweet==1 ? 'info':null))) echo ' class="' . htmlSpecialChars(implode(" ", array_unique($_l->tmp))) . '"' ?>>
@@ -26,9 +29,12 @@ if (!function_exists($_l->blocks['content'][] = '_lb0bbad237fc_content')) { func
 			<td><?php echo Nette\Templating\Helpers::escapeHtml($template->date($row->datumcas, '%H:%M.%S'), ENT_NOQUOTES) ?></td>
 			<td><?php echo Nette\Templating\Helpers::escapeHtml($row->zpracovano, ENT_NOQUOTES) ?>%</td>
 			<td><?php echo Nette\Templating\Helpers::escapeHtml($row->ucast, ENT_NOQUOTES) ?>%</td>
-<?php $k2Class = '' ;$k1Class = '' ;if ($row->kandidat1 > $row->kandidat2): $k1Class = 'success' ;$k2Class = 'error' ;elseif ($row->kandidat1  < $row->kandidat2): $k2Class = 'success' ;$k1Class = 'error' ;endif ?>
-			<td class='<?php echo htmlSpecialChars($k1Class, ENT_QUOTES) ?>'><?php echo Nette\Templating\Helpers::escapeHtml($row->kandidat1, ENT_NOQUOTES) ?>%</td>
-			<td class='<?php echo htmlSpecialChars($k2Class, ENT_QUOTES) ?>'><?php echo Nette\Templating\Helpers::escapeHtml($row->kandidat2, ENT_NOQUOTES) ?>%</td>
+			
+<?php $sClass = '' ;$columnName = '' ;$procento = 0 ;$iterations = 0; foreach ($strany as $stranaId => $stranaNazev): $columnName = 'strana'.$stranaId ;$procento = $row->$columnName ;$sClass = '' ?>
+				<?php if ($procento >= 5): $sClass = 'success' ;endif ?>
+				<td class='<?php echo htmlSpecialChars($sClass, ENT_QUOTES) ?>'><?php echo Nette\Templating\Helpers::escapeHtml($row->$columnName, ENT_NOQUOTES) ?>%</td>
+<?php $iterations++; endforeach ?>
+
 		</tr>
 <?php $iterations++; endforeach ?>
 	</table>
@@ -45,7 +51,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb0bbad237fc_content')) { func
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb037c6c6e43_head')) { function _lb037c6c6e43_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbb3a4b6369f_head')) { function _lbb3a4b6369f_head($_l, $_args) { extract($_args)
 ?><style>
 .table tr td, .table tr th  {
 	text-align: center;

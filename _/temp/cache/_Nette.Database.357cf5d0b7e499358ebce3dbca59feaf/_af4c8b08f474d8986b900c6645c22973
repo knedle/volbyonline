@@ -1,1 +1,1 @@
-<?php //netteCache[01]000070a:2:{s:4:"time";s:21:"0.44647700 1359146180";s:10:"serialized";b:1;}?>a:7:{s:2:"id";b:1;s:8:"datumcas";b:1;s:10:"zpracovano";b:1;s:5:"ucast";b:1;s:9:"kandidat1";b:1;s:9:"kandidat2";b:1;s:5:"tweet";b:1;}
+<?php //netteCache[01]000070a:2:{s:4:"time";s:21:"0.55949100 1382666186";s:10:"serialized";b:1;}?>a:7:{s:2:"id";b:1;s:5:"tweet";b:1;s:8:"datumcas";b:1;s:10:"zpracovano";b:1;s:5:"ucast";b:1;s:9:"kandidat1";b:1;s:9:"kandidat2";b:1;}

@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<VYSLEDKY xmlns="http://www.volby.cz/ps/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.volby.cz/ps/ ps_vysledky.xsd"
+  DATUM_GENEROVANI="24/10/2013" CAS_GENEROVANI="11:18:14">
+  <KRAJ CIS_KRAJ="1" NAZ_KRAJ="Hl. m. Praha">
+    <UCAST OKRSKY_CELKEM="1101" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="12" NAZ_STR="Volte Pr.Blok www.cibulka.net">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="14" NAZ_STR="Aktiv nezávislých občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="16" NAZ_STR="OBČANÉ 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="2" NAZ_KRAJ="Středočeský">
+    <UCAST OKRSKY_CELKEM="2160" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="7" NAZ_STR="Romská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="14" NAZ_STR="Aktiv nezávislých občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="3" NAZ_KRAJ="Jihočeský">
+    <UCAST OKRSKY_CELKEM="1259" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="4" NAZ_KRAJ="Plzeňský">
+    <UCAST OKRSKY_CELKEM="1086" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="5" NAZ_KRAJ="Karlovarský">
+    <UCAST OKRSKY_CELKEM="348" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="6" NAZ_KRAJ="Ústecký">
+    <UCAST OKRSKY_CELKEM="1046" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="7" NAZ_KRAJ="Liberecký">
+    <UCAST OKRSKY_CELKEM="587" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="7" NAZ_STR="Romská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="8" NAZ_KRAJ="Královéhradecký">
+    <UCAST OKRSKY_CELKEM="940" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="14" NAZ_STR="Aktiv nezávislých občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="9" NAZ_KRAJ="Pardubický">
+    <UCAST OKRSKY_CELKEM="875" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="8" NAZ_STR="Klub angažovaných nestraníků">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="10" NAZ_KRAJ="Vysočina">
+    <UCAST OKRSKY_CELKEM="1137" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="14" NAZ_STR="Aktiv nezávislých občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="11" NAZ_KRAJ="Jihomoravský">
+    <UCAST OKRSKY_CELKEM="1405" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="12" NAZ_KRAJ="Olomoucký">
+    <UCAST OKRSKY_CELKEM="926" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="13" NAZ_KRAJ="Zlínský">
+    <UCAST OKRSKY_CELKEM="684" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<KRAJ CIS_KRAJ="14" NAZ_KRAJ="Moravskoslezský">
+    <UCAST OKRSKY_CELKEM="1319" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="0.00" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="0.00" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</KRAJ>
+<CR>
+    <UCAST OKRSKY_CELKEM="14873" OKRSKY_ZPRAC="0" OKRSKY_ZPRAC_PROC="16.26" ZAPSANI_VOLICI="0" VYDANE_OBALKY="0" UCAST_PROC="55.13" ODEVZDANE_OBALKY="0" PLATNE_HLASY="0" PLATNE_HLASY_PROC="0.00" />
+    <STRANA KSTRANA="1" NAZ_STR="Česká str.sociálně demokrat.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="2.00"/>
+    </STRANA>
+    <STRANA KSTRANA="2" NAZ_STR="Strana svobodných občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="3.00"/>
+    </STRANA>
+    <STRANA KSTRANA="3" NAZ_STR="Česká pirátská strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="4.00"/>
+    </STRANA>
+    <STRANA KSTRANA="4" NAZ_STR="TOP 09">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="5.00"/>
+    </STRANA>
+    <STRANA KSTRANA="5" NAZ_STR="HLAVU VZHŮRU - volební blok">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="10.00"/>
+    </STRANA>
+    <STRANA KSTRANA="6" NAZ_STR="Občanská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="20.00"/>
+    </STRANA>
+    <STRANA KSTRANA="7" NAZ_STR="Romská demokratická strana">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="8" NAZ_STR="Klub angažovaných nestraníků">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="9" NAZ_STR="politické hnutí Změna">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="10" NAZ_STR="Strana soukromníků ČR">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="11" NAZ_STR="Křesť.demokr.unie-Čs.str.lid.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="12" NAZ_STR="Volte Pr.Blok www.cibulka.net">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="13" NAZ_STR="Suver.-Strana zdravého rozumu">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="14" NAZ_STR="Aktiv nezávislých občanů">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="15" NAZ_STR="Strana Práv Občanů ZEMANOVCI">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="16" NAZ_STR="OBČANÉ 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="17" NAZ_STR="Úsvit přímé demokr.T.Okamury">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="18" NAZ_STR="Dělnic.str.sociální spravedl.">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="20" NAZ_STR="ANO 2011">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="21" NAZ_STR="Komunistická str.Čech a Moravy">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="22" NAZ_STR="LEV 21-Národní socialisté">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="23" NAZ_STR="Strana zelených">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+    <STRANA KSTRANA="24" NAZ_STR="Koruna Česká (monarch.strana)">
+        <HODNOTY_STRANA HLASY="0" PROC_HLASU="0.00"/>
+    </STRANA>
+</CR>
+</VYSLEDKY>

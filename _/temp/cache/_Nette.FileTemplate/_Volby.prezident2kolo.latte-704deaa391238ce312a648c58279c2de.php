@@ -1,16 +1,16 @@
-<?php //netteCache[01]000386a:2:{s:4:"time";s:21:"0.74787900 1359147036";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:64:"D:\wamp\www\twittervolbyonline\app\templates\Volby\default.latte";i:2;i:1359147033;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
+<?php //netteCache[01]000388a:2:{s:4:"time";s:21:"0.36502000 1382666186";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:66:"D:\wamp\www\volbyonline\_\app\templates\Volby\prezident2kolo.latte";i:2;i:1382660673;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
 
-// source file: D:\wamp\www\twittervolbyonline\app\templates\Volby\default.latte
+// source file: D:\wamp\www\volbyonline\_\app\templates\Volby\prezident2kolo.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '3m8oh3vwzb')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'yptdfoe9n3')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block content
 //
-if (!function_exists($_l->blocks['content'][] = '_lb3244687469_content')) { function _lb3244687469_content($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['content'][] = '_lb4bdf8663c4_content')) { function _lb4bdf8663c4_content($_l, $_args) { extract($_args)
 ?>	<table class='table table-condensed table-xhover table-bordered table-striped'>
 		<tr>
 			<th>datum</th>
@@ -35,7 +35,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb3244687469_content')) { func
 
 
 	<div class="alert alert-info">
-	  <strong>INFO</strong> Zeleně podbarvený řádek jsou data, která byla publikována na twitter účtu 
+	  <strong>INFO</strong> Modře podbarvený řádek jsou data, která byla publikována na twitter účtu 
 	  <a href="http://twitter.com/volbyonline">@volbyonline</a>
 	</div>
 
@@ -45,7 +45,7 @@ if (!function_exists($_l->blocks['content'][] = '_lb3244687469_content')) { func
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb2c99e24769_head')) { function _lb2c99e24769_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbc870376d8c_head')) { function _lbc870376d8c_head($_l, $_args) { extract($_args)
 ?><style>
 .table tr td, .table tr th  {
 	text-align: center;

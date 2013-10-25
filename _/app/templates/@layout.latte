@@ -25,6 +25,17 @@
 <body>
 	<script> document.body.className+=' js' </script>
 
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <a class="brand" href="#">@volbyonline</a>
+	    <ul class="nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a n:href="default, poslaneckaSnemovna2013">2013 - Poslanecká sněmovna</a></li>
+	      <li><a n:href="default, prezident2013">2013 - Prezidentské volby - 2 kolo</a></li>      
+	    </ul>
+	  </div>
+	</div>	
+
 	<p> </p>
 
 	<div class='container'>
@@ -39,7 +50,14 @@
 
 		{include #content}
 
+		<ul class="nav nav-pills">
+			<li><a href="http://volby.cz/opendata/opendata.htm">Zdroj dat: XML volby.cz</a></li>
+		</ul>	
+
 	</div>
+
+
+
 
 	{block scripts}
 	<script src="{$basePath}/js/jquery.js"></script>
