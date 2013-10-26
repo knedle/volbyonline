@@ -26,7 +26,7 @@ class VolbyPresenter extends BasePresenter
 		// vybrat spravnou sablonu
 		$this->setView($parameters['typ']);
 
-		$this->template->data = $this->getService('database')->table($parameters['table']);
+		$this->template->data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
 
 		switch ($parameters['typ']) {
 			case 'prezident2kolo':
@@ -84,11 +84,13 @@ class VolbyPresenter extends BasePresenter
 
 	public function renderTweettest()
 	{
-		$tweet = 'Testovaci tweet - vzor: secteno 6.70% - MZ 51.00% / KS 49.00% (rozdil 2.00%) - ucast 53.00% #volebniVysledky #volby2013 #prezident2013 #volby';
+		$tweet = 'Testovaci tweet...';
 		$this->publikujTweet($tweet);
 	}
 
 	private function publikujTweet($tweet) {
+
+		$tweet = substr($tweet, 0, 140);
 
 		$consumerKey = $this->parameters['twitter']['CONSUMER_KEY'];
 		$consumerSecret = $this->parameters['twitter']['CONSUMER_SECRET'];
@@ -96,7 +98,7 @@ class VolbyPresenter extends BasePresenter
 		$accessTokenSecret = $this->parameters['twitter']['ACCOUNT_SECRET'];
 
 		$twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-		//$twitter->send($tweet);
+		$twitter->send($tweet);
 	}
 
 	/**
@@ -287,7 +289,7 @@ class VolbyPresenter extends BasePresenter
 			$procento = (float)$elemStrana->HODNOTY_STRANA['PROC_HLASU'];
 
 			if ($procento >= 5) {
-				$poradi[$procento] = $parameters['zobrazit'][$stranaId];	
+				$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	
 			}
 
 			$insertData['strana'.$stranaId] = str_replace(",", '.', $procento);			
@@ -323,8 +325,12 @@ class VolbyPresenter extends BasePresenter
 			$posledniHodnota = $posledniTweet->zpracovano;
 			$musiPresahnout = floor($posledniHodnota / $parameters['publikovat']) * $parameters['publikovat'] + $parameters['publikovat'];
 			if (floatval($insertData['zpracovano']) >= $musiPresahnout) {
+				try {
 				$this->publikujTweet($tweet);
 				$insertData['tweet'] = '1';
+				} catch (exception $e) {
+					//dump($e);
+			}
 			} else {
 				$status = "neprekrocili jsme ".$musiPresahnout."% zpracovanych volebnich dat...";
 			}
