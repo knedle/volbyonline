@@ -14,6 +14,7 @@ class VolbyPresenter extends BasePresenter
 	protected function startup() {
 		parent::startup();
 		$this->parameters = $this->getContext()->getParameters();
+		// dump($this->parameters);
 	}
 
 	public function renderDefault($identifikatorVoleb = '')	
@@ -26,14 +27,17 @@ class VolbyPresenter extends BasePresenter
 		// vybrat spravnou sablonu
 		$this->setView($parameters['typ']);
 
-		$this->template->data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
+		if ($parameters['typ'] <> 'multi') {
 
-		switch ($parameters['typ']) {
-			case 'prezident2kolo':
+			$this->template->data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
+
+			switch ($parameters['typ']) {
+				case 'prezident2kolo':
 				$this->template->k1 = $parameters['k1'];
 				$this->template->k2 = $parameters['k2'];
-			break;
-			case 'parlament':
+				break;
+				case 'komunalni':
+				case 'parlament':
 				// nacist nazvy stran
 				$columns = $this->getService('database')->getSupplementalDriver()->getColumns($parameters['table']);
 				foreach($columns as $column) {
@@ -45,8 +49,12 @@ class VolbyPresenter extends BasePresenter
 					}
 				}
 				$this->template->strany = $strany;
+				break;		
 
-			break;			
+			}
+
+		} else {
+			$this->template->multiCasti = $this->parameters[$identifikatorVoleb]['multi'];
 		}
 
 		$this->template->title = $parameters['title'];
@@ -54,6 +62,7 @@ class VolbyPresenter extends BasePresenter
 
 	}
 
+	// http://localhost/volbyonline/volby/cron
 	public function renderCron($identifikatorVoleb = '') {
 
 		if (empty($identifikatorVoleb)) {
@@ -69,6 +78,9 @@ class VolbyPresenter extends BasePresenter
 			case 'parlament':
 			$status = $this->parlament($parameters);
 			break;			
+			case 'multi':
+			$status = $this->multi($parameters);
+			break;					
 		}
 
 		// zalogovat ze bl spusten cron
@@ -326,11 +338,11 @@ class VolbyPresenter extends BasePresenter
 			$musiPresahnout = floor($posledniHodnota / $parameters['publikovat']) * $parameters['publikovat'] + $parameters['publikovat'];
 			if (floatval($insertData['zpracovano']) >= $musiPresahnout) {
 				try {
-				$this->publikujTweet($tweet);
-				$insertData['tweet'] = '1';
+					$this->publikujTweet($tweet);
+					$insertData['tweet'] = '1';
 				} catch (exception $e) {
 					//dump($e);
-			}
+				}
 			} else {
 				$status = "neprekrocili jsme ".$musiPresahnout."% zpracovanych volebnich dat...";
 			}

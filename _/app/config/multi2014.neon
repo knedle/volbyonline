@@ -1,0 +1,81 @@
+parameters:
+	prostejov2014: 
+		typ: komunalni
+		title: Komunální volby města Prostějova 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=589250'
+		table: prostejov2014
+		subtitle: 'Volby do zastupitelstva obce Prostějov'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+#			1: Moravané
+#			2: Koruna česká
+#			3: Republikáni
+			4: Změna
+			5: KDU-ČSL
+			6: ODS
+			7: ANO
+			8: Úsvit
+			9: TOP09
+			10: PéVéčko
+			11: ČSSD
+			12: KSČM
+	brno2014: 
+		typ: komunalni
+		title: Komunální volby města Brna 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=582786'
+		table: brno2014
+		subtitle: 'Volby do zastupitelstva obce Brno'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+#			1: Antibursík
+			2: KSČM
+			3: ČSSD
+			4: KDU-ČSL
+#			5: Starostové
+#			6: Moravané
+			7: ŽítBrno
+			8: Zelení
+			9: Úsvit
+#			10: Republika
+			11: DSSS
+			12: ODS
+#			13: Konzervativci
+			14: AcoBrno?
+#			15: SSO
+			16: TOP09
+			17: ANO
+	vsetin2014: 
+		typ: komunalni
+		title: Komunální volby města Vsetína 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=541630'
+		table: vsetin2014
+		subtitle: 'Volby do zastupitelstva obce Vsetín'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+#			1: SSO
+			2: ODS
+			3: KSČM
+			4: ANO
+			5: KDU-ČSL
+			6: Koalice
+#			7: Moravané
+			8: Starostové
+			9: ČSSD
+			10: TOP09
+	senat2014:
+		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
+		table: senat2014kolo1			
+	senatPraha22014: 
+		typ: senatni
+		default: senat2014
+		title: Senátní volby v Praze 5 2014
+		obvod: 21
+		subtitle: 'Senát parlamentu - obvod Praha 5'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+#			1: SSO
+			2: ODS
+			3: KSČM
+			4: ANO
+			5: KDU-ČSL
+			6: Koalice
+#			7: Moravané
+			8: Starostové
+			9: ČSSD
+			10: TOP09		

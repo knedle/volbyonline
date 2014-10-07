@@ -1,0 +1,32 @@
+{block content}
+
+	<h2>Výpis sledovaných volebních klání</h2>
+
+	<ul>
+	{foreach $multiCasti as $key => $casti}
+		<li><a n:href="default, $key">{$casti}</a></li>
+	{/foreach}
+	</ul>
+
+
+	<div class="alert alert-info">
+	  <strong>INFO</strong> Modře podbarvený řádek jsou data, která byla publikována na twitter účtu 
+	  <a href="http://twitter.com/volbyonline">@volbyonline</a>
+	</div>
+
+{/block}
+
+{block head}
+<style>
+.table tr td, .table tr th  {
+	text-align: center;
+}
+
+.table tbody tr td.success {
+	background-color: #dff0d8;
+}
+.table tbody tr td.error {
+	background-color: #f2dede;
+}
+</style>
+{/block}
