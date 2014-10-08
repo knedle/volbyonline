@@ -1,33 +1,35 @@
-<?php //netteCache[01]000375a:2:{s:4:"time";s:21:"0.05557800 1382666303";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:53:"D:\wamp\www\volbyonline\_\app\templates\@layout.latte";i:2;i:1382666301;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
+<?php //netteCache[01]000375a:2:{s:4:"time";s:21:"0.99289200 1412726818";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:53:"D:\wamp\www\volbyonline\_\app\templates\@layout.latte";i:2;i:1412631852;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"b7f6732 released on 2013-01-01";}}}?><?php
 
 // source file: D:\wamp\www\volbyonline\_\app\templates\@layout.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'amw98y3uik')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'su29f64lb0')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block title
 //
-if (!function_exists($_l->blocks['title'][] = '_lb5f490c4810_title')) { function _lb5f490c4810_title($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['title'][] = '_lbd293e92248_title')) { function _lbd293e92248_title($_l, $_args) { extract($_args)
 ?>Volby 2 twitter<?php
 }}
 
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb9e2fac30c9_head')) { function _lb9e2fac30c9_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lb3b81de7f9a_head')) { function _lb3b81de7f9a_head($_l, $_args) { extract($_args)
 ;
 }}
 
 //
 // block scripts
 //
-if (!function_exists($_l->blocks['scripts'][] = '_lb4523f0845e_scripts')) { function _lb4523f0845e_scripts($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['scripts'][] = '_lb9ffeb31b73_scripts')) { function _lb9ffeb31b73_scripts($_l, $_args) { extract($_args)
 ?>	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/jquery.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js"></script>	
 	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/netteForms.js"></script>
 	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/main.js"></script>
+
 <?php
 }}
 
@@ -78,10 +80,13 @@ ob_start(); call_user_func(reset($_l->blocks['title']), $_l, get_defined_vars())
 	    <a class="brand" href="#">@volbyonline</a>
 	    <ul class="nav">
 	      <li class="active"><a href="#">Home</a></li>
+	      <li><a xclass="dropdown-toggle" xdata-toggle="dropdown" href="<?php echo htmlSpecialChars($_control->link("default", array('senatAkomunal2014'))) ?>
+">2014 - Senátní a komunální volby</a>
+	      </li>	      
 	      <li><a href="<?php echo htmlSpecialChars($_control->link("default", array('poslaneckaSnemovna2013'))) ?>
 ">2013 - Poslanecká sněmovna</a></li>
 	      <li><a href="<?php echo htmlSpecialChars($_control->link("default", array('prezident2013'))) ?>
-">2013 - Prezidentské volby - 2 kolo</a></li>      
+">2013 - Prezidentské volby - 2 kolo</a></li>            
 	    </ul>
 	  </div>
 	</div>	

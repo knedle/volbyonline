@@ -4,6 +4,8 @@
  * Volby presenter.
  */
 
+use Nette\Utils\Strings;
+
 define('BR', "<br>");
 
 class VolbyPresenter extends BasePresenter
@@ -29,15 +31,15 @@ class VolbyPresenter extends BasePresenter
 
 		if ($parameters['typ'] <> 'multi') {
 
-			$this->template->data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
-
 			switch ($parameters['typ']) {
 				case 'prezident2kolo':
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
 				$this->template->k1 = $parameters['k1'];
 				$this->template->k2 = $parameters['k2'];
 				break;
 				case 'komunalni':
 				case 'parlament':
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
 				// nacist nazvy stran
 				$columns = $this->getService('database')->getSupplementalDriver()->getColumns($parameters['table']);
 				foreach($columns as $column) {
@@ -50,8 +52,13 @@ class VolbyPresenter extends BasePresenter
 				}
 				$this->template->strany = $strany;
 				break;		
-
+				case 'senatni':				
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
+				$this->template->strany = $strany;
+				break;		
 			}
+
+			$this->template->data = $data;
 
 		} else {
 			$this->template->multiCasti = $this->parameters[$identifikatorVoleb]['multi'];
