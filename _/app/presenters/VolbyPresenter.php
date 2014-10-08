@@ -4,12 +4,15 @@
  * Volby presenter.
  */
 
+use Nette\Utils\Strings;
+
 define('BR', "<br>");
 
 class VolbyPresenter extends BasePresenter
 {
 
 	private $parameters;
+	private $xmlSenatu = null;
 
 	protected function startup() {
 		parent::startup();
@@ -29,15 +32,15 @@ class VolbyPresenter extends BasePresenter
 
 		if ($parameters['typ'] <> 'multi') {
 
-			$this->template->data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
-
 			switch ($parameters['typ']) {
 				case 'prezident2kolo':
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');				
 				$this->template->k1 = $parameters['k1'];
 				$this->template->k2 = $parameters['k2'];
 				break;
 				case 'komunalni':
 				case 'parlament':
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
 				// nacist nazvy stran
 				$columns = $this->getService('database')->getSupplementalDriver()->getColumns($parameters['table']);
 				foreach($columns as $column) {
@@ -50,8 +53,16 @@ class VolbyPresenter extends BasePresenter
 				}
 				$this->template->strany = $strany;
 				break;		
-
+				case "senatni":
+					// NACIST NASTAVENI SENATNICH VOLEB = VSECHNY OBVODY MAJI SHODNY XML
+					$kdeNajduNastaveniSenatu = $parameters['nastaveni'];		
+					$nastaveniSenatu = $this->parameters[$kdeNajduNastaveniSenatu];		
+					$data = $this->getService('database')->table($nastaveniSenatu['table'])->order('datumcas DESC')->where('obvod_cislo', $parameters['obvod']);
+					$this->template->strany = $parameters['zobrazit'];
+				break;
 			}
+
+			$this->template->data = $data;			
 
 		} else {
 			$this->template->multiCasti = $this->parameters[$identifikatorVoleb]['multi'];
@@ -85,10 +96,17 @@ class VolbyPresenter extends BasePresenter
 
 		// zalogovat ze bl spusten cron
 		$file = dirname(__FILE__).'/../../log/cron.log';
-		$person = date('c') . " | " . $status ."\n";
-		file_put_contents($file, $person, FILE_APPEND | LOCK_EX);		
+		if (is_array($status)) {
+			foreach ($status as $stat) {
+				$person = date('c') . " | " . $stat ."\n";
+				file_put_contents($file, $person, FILE_APPEND | LOCK_EX);		
+			}
+		} else {
+			$person = date('c') . " | " . $status ."\n";
+			file_put_contents($file, $person, FILE_APPEND | LOCK_EX);		
+		}
 
-		$this->template->status = $status;
+		$this->template->status = is_array($status) ? implode("<br />", $status) : $status;
 		$this->template->title = $parameters['title'];
 		$this->template->subtitle = $parameters['subtitle'];
 
@@ -358,6 +376,271 @@ class VolbyPresenter extends BasePresenter
 
 	}
 
+private function multi($parameters) {
 
+		$kontrola = $this->kontrola($parameters);
+		if (!empty($kontrola)) {
+			return $kontrola;
+		}
+
+		// dump($parameters['multi']);
+
+		$nactenyDataSenatu = false;
+
+		$status = array();
+
+		foreach ($parameters['multi'] as $key => $value) {
+			$multivolby = $this->parameters[$key];			
+
+			switch ($multivolby['typ']) {
+				case "komunalni":
+				$status[] = $this->komunalni($multivolby);
+				break;
+				case "senatni":
+				$status[] = $this->senatni($multivolby, $nactenyDataSenatu);
+				$nactenyDataSenatu = true;
+				break;
+			}
+		}
+
+		return $status ;
+
+	}
+
+	private function kontrola($parameters) {
+		// TODO - PREHODIT KONTROLY DO FCE
+		$dnesTed = new DateTime();
+
+		// je spravne datum?
+		$startDen = new DateTime($parameters['startDen']);
+		if ($dnesTed->format("Y-m-d") <> $startDen->format("Y-m-d")) {
+			return 'nenastal den scitani voleb, tj. '.$parameters['startDen'].'...';
+		}
+
+		// je spravny cas?
+		$startCas = $parameters['startCas'];
+		if ($dnesTed->format("H:i") < $startCas) {
+			return 'nenastal cas publikovani vysledku voleb...';
+		}
+
+		// $volby = $this->getService('database')->table($parameters['table']);;
+		// $hledamPosledniTweet = clone $volby;
+		// $posledniTweet = $hledamPosledniTweet->where ('tweet', '1')->order('datumcas DESC')->fetch();
+
+		// if (!empty($posledniTweet) && intval($posledniTweet->zpracovano) >= 100) {
+		// 	return 'volby skoncili...';
+		// }		
+		return ''; // prazdne = vse ok
+	}
+
+	private function komunalni($parameters) {
+
+		// dump($parameters);
+
+		$volby = $this->getService('database')->table($parameters['table']);;
+		$hledamPosledniTweet = clone $volby;
+		$posledniTweet = $hledamPosledniTweet->where ('tweet', '1')->order('datumcas DESC')->fetch();
+
+		if (!empty($posledniTweet) && intval($posledniTweet->zpracovano) >= 100) {
+			return 'volby skoncili...';
+		}
+
+
+		// dump($parameters['volbyUrl']);
+		$content = file_get_contents($parameters['volbyUrl']);
+
+		$xml = simplexml_load_string($content);	
+
+		$vysledkyObci = $xml->OBEC->VYSLEDEK;
+
+		$insertData = array();
+
+		$ucast = $vysledkyObci->UCAST['UCAST_PROC'];
+		$insertData['ucast'] = str_replace(",", '.', $ucast);
+
+		$zpracovano = $vysledkyObci->UCAST['OKRSKY_ZPRAC_PROC'];
+		$insertData['zpracovano'] = str_replace(",", '.', $zpracovano);
+
+		$poradi = array();
+
+		// projit strany
+		foreach($vysledkyObci->VOLEBNI_STRANA as $elemStrana) {
+			//var_dump($elemStrana['NAZ_STR']);
+
+			$stranaId = (int)$elemStrana['POR_STR_HLAS_LIST'];
+			$procento = (float)$elemStrana->HODNOTY_STRANA['HLASY_PROC'];
+
+			if ($procento >= 5) { // limit pro postup do zastupitelstva
+				$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	
+			}
+
+			$insertData['strana'.$stranaId] = str_replace(",", '.', $procento);			
+		} 
+
+
+		$insertData['datumcas'] =  new Nette\Database\SqlLiteral('NOW()');
+		$insertData['tweet'] = '0';
+
+		// definovani tweetu
+		krsort($poradi);
+
+		$poradiText = array();
+		foreach($poradi as $poradiProcento => $poradiStrana) {
+			$poradiText[] = $poradiStrana.':'.$poradiProcento.'%';
+		}
+		$tweet = sprintf("secteno %s - %s - ucast %s #volebniVysledky #volby2014 #komunal2014 #volby", $insertData['zpracovano']."%", implode(';', $poradiText), $insertData['ucast']."%");
+
+		$status = $tweet;
+		$tweet = "#". Strings::webalize($xml->OBEC['NAZEVZAST'])." " . $tweet;
+
+		if($posledniTweet == false) {
+			// nebyl publikovan zadny tweet
+			if (floatval($insertData['zpracovano']) >= 1) {
+				$this->publikujTweet($tweet);
+				$insertData['tweet'] = '1';
+			} else {
+				$status = 'stale cekame zpracovani prvniho procenta volebnich dat...';
+			}
+		} else {
+			//dump($posledniTweet->zpracovano);
+
+			$posledniHodnota = $posledniTweet->zpracovano;
+			$musiPresahnout = floor($posledniHodnota / $parameters['publikovat']) * $parameters['publikovat'] + $parameters['publikovat'];
+			if (floatval($insertData['zpracovano']) >= $musiPresahnout) {
+				try {
+					$this->publikujTweet($tweet);
+					$insertData['tweet'] = '1';
+				} catch (exception $e) {
+					//dump($e);
+				}
+			} else {
+				$status = "neprekrocili jsme ".$musiPresahnout."% zpracovanych volebnich dat...";
+			}
+		}
+
+		$volby->insert($insertData);
+
+		if ($insertData['tweet'] != '1') {
+			$tweet = '';
+		}
+
+		return $xml->OBEC['NAZEVZAST']. ': '. $status;	
+		// echo $status;
+
+	}
+
+	private function senatni($parameters, $nactenyDataSenatu) {
+
+		// NACIST NASTAVENI SENATNICH VOLEB = VSECHNY OBVODY MAJI SHODNY XML
+		$kdeNajduNastaveniSenatu = $parameters['nastaveni'];		
+		$nastaveniSenatu = $this->parameters[$kdeNajduNastaveniSenatu];		
+
+		$volby = $this->getService('database')->table($nastaveniSenatu['table']);
+		$hledamPosledniTweet = clone $volby;
+		$posledniTweet = $hledamPosledniTweet->where('tweet', '1')->where('obvod_cislo', $parameters['obvod'])->order('datumcas DESC')->fetch();
+
+		if (!empty($posledniTweet) && intval($posledniTweet->zpracovano) >= 100) {
+			return 'volby skoncili...';
+		}
+
+		if (!$nactenyDataSenatu) {
+			// dump($parameters['volbyUrl']);
+			$content = file_get_contents($nastaveniSenatu['volbyUrl']);
+
+			$this->xmlSenatu = simplexml_load_string($content);	
+		}
+		$xml = $this->xmlSenatu;
+
+		foreach($xml as $obvod){
+			if ($obvod['CISLO'] == $parameters['obvod']) {
+
+				$insertData = array();
+
+				$insertData['obvod_cislo'] = (int)$obvod['CISLO'];
+				$insertData['obvod_nazev'] = (string)$obvod['NAZEV'];
+
+				$ucast = $obvod->UCAST['UCAST_PROC'];
+				$insertData['ucast'] = str_replace(",", '.', $ucast);
+
+				$zpracovano = $obvod->UCAST['OKRSKY_ZPRAC_PROC'];
+				$insertData['zpracovano'] = str_replace(",", '.', $zpracovano);
+
+				$poradi = array();
+
+				// projit kandidaty
+				foreach($obvod->KANDIDAT as $elemStrana) {
+					//var_dump($elemStrana['NAZ_STR']);
+
+					$stranaId = (int)$elemStrana['PORADOVE_CISLO'];
+					$procento = (float)$elemStrana->HODNOTY_STRANA['HLASY_PROC_1KOLO'];
+
+					if ($procento >= 5) { // limit pro postup do zastupitelstva
+						$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	
+					}
+
+					$insertData['kandidat'.$stranaId] = str_replace(",", '.', $procento);			
+				} 
+
+
+				$insertData['datumcas'] =  new Nette\Database\SqlLiteral('NOW()');
+				$insertData['tweet'] = '0';
+
+				// definovani tweetu
+				krsort($poradi);
+
+				$poradiText = array();
+				$max = 4; // kolik budu publikovat lidi s nejlepsimi vysledky
+				$i = 1;
+				foreach($poradi as $poradiProcento => $poradiStrana) {
+					$poradiText[] = $poradiStrana.':'.$poradiProcento.'%';					
+					$i++;
+					if ($i > $max)  {
+						break; // vice nez limit vyse nevypisuju
+					}					
+				}
+
+				$tweet = sprintf("secteno %s - %s - ucast %s #volebniVysledky #volby2014 #senat2014 #volby", $insertData['zpracovano']."%", implode(';', $poradiText), $insertData['ucast']."%");
+
+				$status = $tweet;
+				$tweet = "#". Strings::webalize($insertData['obvod_nazev'])." " . $tweet;
+
+				if($posledniTweet == false) {
+					// nebyl publikovan zadny tweet
+					if (floatval($insertData['zpracovano']) >= 1) {
+						$this->publikujTweet($tweet);
+						$insertData['tweet'] = '1';
+					} else {
+						$status = 'stale cekame zpracovani prvniho procenta volebnich dat...';
+					}
+				} else {
+					//dump($posledniTweet->zpracovano);
+
+					$posledniHodnota = $posledniTweet->zpracovano;
+					$musiPresahnout = floor($posledniHodnota / $parameters['publikovat']) * $parameters['publikovat'] + $parameters['publikovat'];
+					if (floatval($insertData['zpracovano']) >= $musiPresahnout) {
+						try {
+							$this->publikujTweet($tweet);
+							$insertData['tweet'] = '1';
+						} catch (exception $e) {
+							//dump($e);
+						}
+					} else {
+						$status = "neprekrocili jsme ".$musiPresahnout."% zpracovanych volebnich dat...";
+					}
+				}
+
+
+
+				$volby->insert($insertData);
+
+				if ($insertData['tweet'] != '1') {
+					$tweet = '';
+				}
+
+				return $insertData['obvod_nazev']. ': '. $status;	
+			}
+		}		
+
+	}		
 
 }

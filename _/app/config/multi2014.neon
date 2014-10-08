@@ -59,23 +59,73 @@ parameters:
 			8: Starostové
 			9: ČSSD
 			10: TOP09
+	premyslovice2014: 
+		typ: komunalni
+		title: Komunální volby obce Přemyslovice 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=589934'
+		table: premyslovice2014
+		subtitle: 'Volby do zastupitelstva obce Přemyslovice'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: Nezávislí
+			2: Nezávislí pro Přemyslovice
+			3: ČSSD			
 	senat2014:
 		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
 		table: senat2014kolo1			
 	senatPraha22014: 
 		typ: senatni
-		default: senat2014
+		nastaveni: senat2014
 		title: Senátní volby v Praze 5 2014
 		obvod: 21
 		subtitle: 'Senát parlamentu - obvod Praha 5'
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
-#			1: SSO
-			2: ODS
-			3: KSČM
-			4: ANO
-			5: KDU-ČSL
-			6: Koalice
-#			7: Moravané
-			8: Starostové
-			9: ČSSD
-			10: TOP09		
+			1: Petrov
+			2: Solis
+			3: Hrádela
+			4: Kříž
+			5: Láska
+			6: Balaš
+			7: Ledl
+			8: Adámková
+			9: Jančík
+			10: Žáček
+			11: Štech
+	senatPraha12014: 
+		typ: senatni
+		nastaveni: senat2014
+		title: Senátní volby v Praze 1 2014
+		obvod: 27
+		subtitle: 'Senát parlamentu - obvod Praha 1'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: Kasal
+			2: Gušlbauerová
+			3: Šefl
+			4: Jurových
+			5: Pavlík
+			6: Bursík
+			7: Stwora
+			8: Schwarz
+			9: Hampl
+			10: Dočekal
+			11: Chromíková
+			12: Rykl			
+			13: Mládek			
+			14: Janáčková		
+			15: Jurinová
+	senatKladno2014: 
+		typ: senatni
+		nastaveni: senat2014
+		title: Senátní volby v Kladně 2014
+		obvod: 30
+		subtitle: 'Senát parlamentu - obvod Kladno'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu						
+			1: Kasal
+			2: Cervan
+			3: Landa
+			4: Chaloupka
+			5: Hausmann
+			6: Kohoutová
+			7: Vojtová
+			8: Stehlík
+			9: Šrámková
+			10: Dienstbier		
