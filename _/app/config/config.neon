@@ -65,12 +65,9 @@ common:
 			subtitle: 'Volby do zastupitelstev obcí a do Senátu Parlamentu ČR konané dne 10.10. – 11.10.2014'
 			multi:				
 				brno2014: Zastupitelstvo statutárního města Brna				
-				senatPraha12014: Volby do Senátu v Praze 1
 				senatPraha22014: Volby do Senátu v Praze 5
-				senatKladno2014: Volby do Senátu v Kladně
 				vsetin2014: Zastupitelstvo města Vsetína
 				prostejov2014: Zastupitelstvo statutárního města Prostějova
-				premyslovice2014: Zastupitelstvo obce Přemyslovice
 	php:
 		date.timezone: Europe/Prague
 		# zlib.output_compression: yes
