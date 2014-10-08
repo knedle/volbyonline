@@ -58,19 +58,16 @@ common:
 		senatAkomunal2014:
 			typ: multi # bude nekolik typu
 			publikovat: 5 # kazdych 5 procent
-			startDen: "08.10.2014" #"26.10.2013"
+			startDen: "26.10.2013"
 #			startCas: "14:00"
-			startCas: "00:00"
+			startCas: "01:00"
 			title: 'Senátní a komunální volby 2014'
 			subtitle: 'Volby do zastupitelstev obcí a do Senátu Parlamentu ČR konané dne 10.10. – 11.10.2014'
 			multi:				
 				brno2014: Zastupitelstvo statutárního města Brna				
-				senatPraha12014: Volby do Senátu v Praze 1
 				senatPraha22014: Volby do Senátu v Praze 5
-				senatKladno2014: Volby do Senátu v Kladně
 				vsetin2014: Zastupitelstvo města Vsetína
 				prostejov2014: Zastupitelstvo statutárního města Prostějova
-				premyslovice2014: Zastupitelstvo obce Přemyslovice
 	php:
 		date.timezone: Europe/Prague
 		# zlib.output_compression: yes
