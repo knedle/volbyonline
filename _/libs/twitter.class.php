@@ -9,13 +9,13 @@ require_once dirname(__FILE__) . '/OAuth.php';
  * @author     David Grudl
  * @copyright  Copyright (c) 2008 David Grudl
  * @license    New BSD License
- * @link       http://phpfashion.com/
+ * @link       http://phpfashion.com/ http://phpfashion.com/twitter-for-php
  * @see        http://dev.twitter.com/doc
- * @version    3.0
+ * @version    3.3
  */
 class Twitter
 {
-	const API_URL = 'http://api.twitter.com/1.1/';
+	const API_URL = 'https://api.twitter.com/1.1/';
 
 	/**#@+ Timeline {@link Twitter::load()} */
 	const ME = 1;
@@ -29,6 +29,14 @@ class Twitter
 
 	/** @var string */
 	public static $cacheDir;
+
+	/** @var array */
+	public $httpOptions = array(
+		CURLOPT_TIMEOUT => 20,
+		CURLOPT_SSL_VERIFYPEER => 0,
+		CURLOPT_HTTPHEADER => array('Expect:'),
+		CURLOPT_USERAGENT => 'Twitter for PHP',
+	);
 
 	/** @var Twitter_OAuthSignatureMethod */
 	private $signatureMethod;
@@ -61,7 +69,6 @@ class Twitter
 	}
 
 
-
 	/**
 	 * Tests if user credentials are valid.
 	 * @return boolean
@@ -82,18 +89,33 @@ class Twitter
 	}
 
 
-
 	/**
 	 * Sends message to the Twitter.
 	 * @param string   message encoded in UTF-8
 	 * @return object
 	 * @throws TwitterException
 	 */
-	public function send($message)
+	public function send($message, $media = NULL)
 	{
-		return $this->request('statuses/update', 'POST', array('status' => $message));
+		return $this->request(
+			$media ? 'statuses/update_with_media' : 'statuses/update',
+			'POST',
+			array('status' => $message),
+			$media ? array('media[]' => $media) : NULL
+		);
 	}
 
+
+	/**
+	 * Follows a user on Twitter.
+	 * @param  string  user name
+	 * @return object
+	 * @throws TwitterException
+	 */
+	public function follow($username)
+	{
+		return $this->request('friendships/create', 'POST', array('screen_name' => $username));
+	}
 
 
 	/**
@@ -118,7 +140,6 @@ class Twitter
 	}
 
 
-
 	/**
 	 * Returns information of a given user.
 	 * @param  string name
@@ -131,6 +152,29 @@ class Twitter
 	}
 
 
+	/**
+	 * Returns information of a given user by id.
+	 * @param  string name
+	 * @return mixed
+	 * @throws TwitterException
+	 */
+	public function loadUserInfoById($id)
+	{
+		return $this->cachedRequest('users/show', array('user_id' => $id));
+	}
+
+
+	/**
+	 * Returns followers of a given user.
+	 * @param  string name
+	 * @return mixed
+	 * @throws TwitterException
+	 */
+	public function loadUserFollowers($user, $count = 5000, $cursor = -1, $cacheExpiry = null)
+	{
+		return $this->cachedRequest('followers/ids', array('screen_name' => $user, 'count' => $count, 'cursor' => $cursor), $cacheExpiry);
+	}
+
 
 	/**
 	 * Destroys status.
@@ -140,23 +184,23 @@ class Twitter
 	 */
 	public function destroy($id)
 	{
-		$res = $this->request("statuses/destroy/$id", 'GET');
+		$res = $this->request("statuses/destroy/$id", 'POST');
 		return $res->id ? $res->id : FALSE;
 	}
-
 
 
 	/**
 	 * Returns tweets that match a specified query.
 	 * @param  string|array   query
+	 * @param  bool  return complete response?
 	 * @return mixed
 	 * @throws TwitterException
 	 */
-	public function search($query)
+	public function search($query, $full = FALSE)
 	{
-		return $this->request('search/tweets', 'GET', is_array($query) ? $query : array('q' => $query))->statuses;
+		$res = $this->request('search/tweets', 'GET', is_array($query) ? $query : array('q' => $query));
+		return $full ? $res : $res->statuses;
 	}
-
 
 
 	/**
@@ -164,10 +208,11 @@ class Twitter
 	 * @param  string  URL or twitter command
 	 * @param  string  HTTP method GET or POST
 	 * @param  array   data
+	 * @param  array   uploaded files
 	 * @return mixed
 	 * @throws TwitterException
 	 */
-	public function request($resource, $method, array $data = NULL)
+	public function request($resource, $method, array $data = NULL, array $files = NULL)
 	{
 		if (!strpos($resource, '://')) {
 			if (!strpos($resource, '.')) {
@@ -176,28 +221,30 @@ class Twitter
 			$resource = self::API_URL . $resource;
 		}
 
-		foreach (array_keys($data, NULL, TRUE) as $key) {
+		foreach (array_keys((array) $data, NULL, TRUE) as $key) {
 			unset($data[$key]);
 		}
 
-		$request = Twitter_OAuthRequest::from_consumer_and_token($this->consumer, $this->token, $method, $resource, $data);
-		$request->sign_request($this->signatureMethod, $this->consumer, $this->token);
-
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_HEADER, FALSE);
-		curl_setopt($curl, CURLOPT_TIMEOUT, 20);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curl, CURLOPT_HTTPHEADER, array('Expect:'));
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE); // no echo, just return result
-		curl_setopt($curl, CURLOPT_USERAGENT, 'Twitter for PHP');
-		if ($method === 'POST') {
-			curl_setopt($curl, CURLOPT_POST, TRUE);
-			curl_setopt($curl, CURLOPT_POSTFIELDS, $request->to_postdata());
-			curl_setopt($curl, CURLOPT_URL, $request->get_normalized_http_url());
-		} else {
-			curl_setopt($curl, CURLOPT_URL, $request->to_url());
+		foreach ((array) $files as $key => $file) {
+			$data[$key] = '@' . $file;
 		}
 
+		$request = Twitter_OAuthRequest::from_consumer_and_token($this->consumer, $this->token, $method, $resource, $files ? array() : $data);
+		$request->sign_request($this->signatureMethod, $this->consumer, $this->token);
+
+		$options = array(
+			CURLOPT_HEADER => FALSE,
+			CURLOPT_RETURNTRANSFER => TRUE,
+		) + ($method === 'POST' ? array(
+			CURLOPT_POST => TRUE,
+			CURLOPT_POSTFIELDS => $files ? $data : $request->to_postdata(),
+			CURLOPT_URL => $files ? $request->to_url() : $request->get_normalized_http_url(),
+		) : array(
+			CURLOPT_URL => $request->to_url(),
+		)) + $this->httpOptions;
+
+		$curl = curl_init();
+		curl_setopt_array($curl, $options);
 		$result = curl_exec($curl);
 		if (curl_errno($curl)) {
 			throw new TwitterException('Server error: ' . curl_error($curl));
@@ -217,7 +264,6 @@ class Twitter
 
 		return $payload;
 	}
-
 
 
 	/**
@@ -256,7 +302,6 @@ class Twitter
 	}
 
 
-
 	/**
 	 * Makes twitter links, @usernames and #hashtags clickable.
 	 * @param  stdClass|string status
@@ -265,6 +310,7 @@ class Twitter
 	public static function clickable($status)
 	{
 		if (!is_object($status)) { // back compatibility
+			trigger_error(__METHOD__ . '() has been changed; pass as parameter status object, not just text.', E_USER_WARNING);
 			return preg_replace_callback(
 				'~(?<!\w)(https?://\S+\w|www\.\S+\w|@\w+|#\w+)|[<>&]~u',
 				array(__CLASS__, 'clickableCallback'),
@@ -286,6 +332,11 @@ class Twitter
 		foreach ($status->entities->user_mentions as $item) {
 			$all[$item->indices[0]] = array("http://twitter.com/$item->screen_name", "@$item->screen_name", $item->indices[1]);
 		}
+		if (isset($status->entities->media)) {
+			foreach ($status->entities->media as $item) {
+				$all[$item->indices[0]] = array($item->url, $item->display_url, $item->indices[1]);
+			}
+		}
 
 		krsort($all);
 		$s = $status->text;
@@ -296,7 +347,6 @@ class Twitter
 		}
 		return $s;
 	}
-
 
 
 	private static function clickableCallback($m)

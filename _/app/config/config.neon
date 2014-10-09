@@ -58,13 +58,12 @@ common:
 		senatAkomunal2014:
 			typ: multi # bude nekolik typu
 			publikovat: 5 # kazdych 5 procent
-#			startDen: "26.10.2013"
-			startDen: "08.10.2014"
-#			startCas: "14:00"
-			startCas: "01:00"
+			startDen: "11.10.2014"
+			startCas: "14:00"
 			title: 'Senátní a komunální volby 2014'
 			subtitle: 'Volby do zastupitelstev obcí a do Senátu Parlamentu ČR konané dne 10.10. – 11.10.2014'
 			multi:				
+				praha2014: Zastupitelstvo hlavního města Prahy
 				brno2014: Zastupitelstvo statutárního města Brna				
 				senatPraha12014: Volby do Senátu v Praze 1
 				senatPraha22014: Volby do Senátu v Praze 5

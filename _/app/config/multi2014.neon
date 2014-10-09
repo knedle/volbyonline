@@ -9,15 +9,15 @@ parameters:
 #			1: Moravané
 #			2: Koruna česká
 #			3: Republikáni
-			4: Změna
-			5: KDU-ČSL
+			4: Zmena
+			5: KDU-CSL
 			6: ODS
 			7: ANO
-			8: Úsvit
+			8: Usvit
 			9: TOP09
-			10: PéVéčko
-			11: ČSSD
-			12: KSČM
+			10: PeVecko
+			11: CSSD
+			12: KSCM
 	brno2014: 
 		typ: komunalni
 		title: Komunální volby města Brna 2014
@@ -26,14 +26,14 @@ parameters:
 		subtitle: 'Volby do zastupitelstva obce Brno'
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: Antibursík
-			2: KSČM
-			3: ČSSD
-			4: KDU-ČSL
+			2: KSCM
+			3: CSSD
+			4: KDU-CSL
 #			5: Starostové
 #			6: Moravané
-			7: ŽítBrno
-			8: Zelení
-			9: Úsvit
+			7: ZitBrno
+			8: Zeleni
+			9: Usvit
 #			10: Republika
 			11: DSSS
 			12: ODS
@@ -51,13 +51,13 @@ parameters:
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: SSO
 			2: ODS
-			3: KSČM
+			3: KSCM
 			4: ANO
-			5: KDU-ČSL
+			5: KDU-CSL
 			6: Koalice
 #			7: Moravané
 			8: Starostové
-			9: ČSSD
+			9: CSSD
 			10: TOP09
 	premyslovice2014: 
 		typ: komunalni
@@ -66,9 +66,47 @@ parameters:
 		table: premyslovice2014
 		subtitle: 'Volby do zastupitelstva obce Přemyslovice'
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
-			1: Nezávislí
-			2: Nezávislí pro Přemyslovice
-			3: ČSSD			
+			1: Nezavisli
+			2: NezavisliProPremyky
+			3: CSSD
+	praha2014: 
+		typ: komunalni
+		title: Zastupitelstvo hlavního města Prahy
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=554782'
+		table: praha2014
+		subtitle: 'Volby do zastupitelstva hl. města Prahy'
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: 3KOALICE
+#			2: SNOP - Praha
+			3: CSSD
+#			4: Republika pro Prahu
+#			5: Romská demokratická strana
+#			6: LEV 21 - Národní socialisté
+			7: Svobodni
+#			8: RESTART 2014
+			9: KSCM
+#			10: DOMOV
+			11: Usvit
+#			12: PATRIOTI
+#			13: Společnost proti developerské výstavbě v Prokopském údolí
+			14: ProPrahu(14)
+#			15: Nezavisli
+#			16: Hnutí občanů Prahy
+#			17: Konzervativní aliance 2014
+			18: ANO
+			19: Pirati
+#			20: ROZUMNÍ
+#			21: Řešení pro Prahu
+#			22: Národní kongres
+			23: Kasl
+			24: ODS
+			25: TOP09
+#			26: OBRODA
+#			27: Strana Práv Občanů
+#			28: Občanská konzervativní strana
+			29: PROPRAHU(29)
+#			30: Cibulka
+#			31: Koruna česká 			
 	senat2014:
 		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
 		table: senat2014kolo1			
@@ -81,15 +119,15 @@ parameters:
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Petrov
 			2: Solis
-			3: Hrádela
-			4: Kříž
-			5: Láska
-			6: Balaš
+			3: Hradela
+			4: Kriz
+			5: Laska
+			6: Balas
 			7: Ledl
-			8: Adámková
-			9: Jančík
-			10: Žáček
-			11: Štech
+			8: Adamkova
+			9: Jančik
+			10: Zacek
+			11: Stech
 	senatPraha12014: 
 		typ: senatni
 		nastaveni: senat2014
@@ -98,20 +136,20 @@ parameters:
 		subtitle: 'Senát parlamentu - obvod Praha 1'
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Kasal
-			2: Gušlbauerová
-			3: Šefl
-			4: Jurových
-			5: Pavlík
-			6: Bursík
+			2: Guslbauerova
+			3: Sefl
+			4: Jurovych
+			5: Pavlik
+			6: Bursik
 			7: Stwora
 			8: Schwarz
 			9: Hampl
-			10: Dočekal
+			10: Docekal
 			11: Chromíková
 			12: Rykl			
-			13: Mládek			
-			14: Janáčková		
-			15: Jurinová
+			13: Mladek			
+			14: Janackova
+			15: Jurinova
 	senatKladno2014: 
 		typ: senatni
 		nastaveni: senat2014
@@ -124,8 +162,8 @@ parameters:
 			3: Landa
 			4: Chaloupka
 			5: Hausmann
-			6: Kohoutová
-			7: Vojtová
-			8: Stehlík
-			9: Šrámková
+			6: Kohoutova
+			7: Vojtova
+			8: Stehlik
+			9: Sramkova
 			10: Dienstbier		
