@@ -40,7 +40,7 @@ class VolbyPresenter extends BasePresenter
 				break;
 				case 'komunalni':
 				case 'parlament':
-				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC');
+				$data = $this->getService('database')->table($parameters['table'])->order('datumcas DESC')->where('tweet', '1');
 				// nacist nazvy stran
 				$columns = $this->getService('database')->getSupplementalDriver()->getColumns($parameters['table']);
 				foreach($columns as $column) {
@@ -55,10 +55,10 @@ class VolbyPresenter extends BasePresenter
 				break;		
 				case "senatni":
 					// NACIST NASTAVENI SENATNICH VOLEB = VSECHNY OBVODY MAJI SHODNY XML
-					$kdeNajduNastaveniSenatu = $parameters['nastaveni'];		
-					$nastaveniSenatu = $this->parameters[$kdeNajduNastaveniSenatu];		
-					$data = $this->getService('database')->table($nastaveniSenatu['table'])->order('datumcas DESC')->where('obvod_cislo', $parameters['obvod']);
-					$this->template->strany = $parameters['zobrazit'];
+				$kdeNajduNastaveniSenatu = $parameters['nastaveni'];		
+				$nastaveniSenatu = $this->parameters[$kdeNajduNastaveniSenatu];		
+				$data = $this->getService('database')->table($nastaveniSenatu['table'])->order('datumcas DESC')->where('obvod_cislo', $parameters['obvod'])->where('tweet', '1');
+				$this->template->strany = $parameters['zobrazit'];
 				break;
 			}
 
@@ -112,9 +112,10 @@ class VolbyPresenter extends BasePresenter
 
 	}
 
-	public function renderTweettest()
-	{
-		$tweet = 'Testovaci tweet...';
+	public function renderTweettest($tweet = '') {
+		if (empty($tweet)) {
+			$tweet = 'Testovaci tweet... (fungujeme?)';
+		}
 		$this->publikujTweet($tweet);
 	}
 
@@ -267,6 +268,9 @@ class VolbyPresenter extends BasePresenter
 		return $status;
 	}
 	
+	/**
+	* XML graber pro volby do parlamentu
+	*/
 	private function parlament($parameters) {
 
 		// TODO - PREHODIT KONTROLY DO FCE
@@ -376,7 +380,10 @@ class VolbyPresenter extends BasePresenter
 
 	}
 
-private function multi($parameters) {
+	/**
+	* spoustec pro multivolby - napr komunalky se senatnimi
+	*/
+	private function multi($parameters) {
 
 		$kontrola = $this->kontrola($parameters);
 		if (!empty($kontrola)) {
@@ -407,6 +414,9 @@ private function multi($parameters) {
 
 	}
 
+	/**
+	* kontorla casu, zda se uz muze graber spustit
+	*/
 	private function kontrola($parameters) {
 		// TODO - PREHODIT KONTROLY DO FCE
 		$dnesTed = new DateTime();
@@ -433,6 +443,9 @@ private function multi($parameters) {
 		return ''; // prazdne = vse ok
 	}
 
+	/**
+	* XML graber pro komunalni volby - odvozen od parlamentnich voleb
+	*/
 	private function komunalni($parameters) {
 
 		// dump($parameters);
@@ -468,7 +481,7 @@ private function multi($parameters) {
 			//var_dump($elemStrana['NAZ_STR']);
 
 			$stranaId = (int)$elemStrana['POR_STR_HLAS_LIST'];
-			$procento = (float)$elemStrana->HODNOTY_STRANA['HLASY_PROC'];
+			$procento = (float)$elemStrana['HLASY_PROC'];
 
 			if ($procento >= 5) { // limit pro postup do zastupitelstva
 				$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	
@@ -529,6 +542,9 @@ private function multi($parameters) {
 
 	}
 
+	/**
+	* XML graber pro senatni volby, odvozen od prezidentskych
+	*/
 	private function senatni($parameters, $nactenyDataSenatu) {
 
 		// NACIST NASTAVENI SENATNICH VOLEB = VSECHNY OBVODY MAJI SHODNY XML
@@ -572,7 +588,7 @@ private function multi($parameters) {
 					//var_dump($elemStrana['NAZ_STR']);
 
 					$stranaId = (int)$elemStrana['PORADOVE_CISLO'];
-					$procento = (float)$elemStrana->HODNOTY_STRANA['HLASY_PROC_1KOLO'];
+					$procento = (float)$elemStrana['HLASY_PROC_1KOLO'];
 
 					if ($procento >= 5) { // limit pro postup do zastupitelstva
 						$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	

@@ -1,10 +1,11 @@
 parameters:
-	prostejov2014: 
+	prostejov2014:
 		typ: komunalni
 		title: Komunální volby města Prostějova 2014
 		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=589250'
 		table: prostejov2014
 		subtitle: 'Volby do zastupitelstva obce Prostějov'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: Moravané
 #			2: Koruna česká
@@ -18,12 +19,13 @@ parameters:
 			10: PeVecko
 			11: CSSD
 			12: KSCM
-	brno2014: 
+	brno2014:
 		typ: komunalni
 		title: Komunální volby města Brna 2014
 		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=582786'
 		table: brno2014
 		subtitle: 'Volby do zastupitelstva obce Brno'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: Antibursík
 			2: KSCM
@@ -33,21 +35,58 @@ parameters:
 #			6: Moravané
 			7: ZitBrno
 			8: Zeleni
-			9: Usvit
+#			9: Usvit
 #			10: Republika
-			11: DSSS
+#			11: DSSS
 			12: ODS
 #			13: Konzervativci
-			14: AcoBrno?
+#			14: AcoBrno?
 #			15: SSO
 			16: TOP09
 			17: ANO
-	vsetin2014: 
+	brnostred2014:
+		typ: komunalni
+		title: Komunální volby města Brna-střed 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=550973'
+		table: brnostred2014
+		subtitle: 'Volby do zastupitelstva obce Brno-střed'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: KDU-CSL
+			2: Zeleni
+			3: ODS
+			4: KSCM
+#			5: Konzervativní strana
+			6: ANO
+#			7: STARaNEX
+#			8: SSO
+			9: CSSD
+			10: TOP09
+#			11: ACOBRNO?
+			12: ZitBrno
+	litovel2014:
+		typ: komunalni
+		title: Komunální volby města Litovel 2014
+		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=503444'
+		table: litovel2014
+		subtitle: 'Volby do zastupitelstva obce Litovel'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: SNK-OSL
+			2: KDU-CSL
+			3: ODS
+			4: CSSD
+			5: ANO
+			6: SNKED
+			7: KSCM
+			8: SNKL
+	vsetin2014:
 		typ: komunalni
 		title: Komunální volby města Vsetína 2014
 		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=541630'
 		table: vsetin2014
 		subtitle: 'Volby do zastupitelstva obce Vsetín'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: SSO
 			2: ODS
@@ -59,22 +98,24 @@ parameters:
 			8: Starostové
 			9: CSSD
 			10: TOP09
-	premyslovice2014: 
+	premyslovice2014:
 		typ: komunalni
 		title: Komunální volby obce Přemyslovice 2014
 		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=589934'
 		table: premyslovice2014
 		subtitle: 'Volby do zastupitelstva obce Přemyslovice'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Nezavisli
 			2: NezavisliProPremyky
 			3: CSSD
-	praha2014: 
+	praha2014:
 		typ: komunalni
 		title: Zastupitelstvo hlavního města Prahy
 		volbyUrl: 'http://www.volby.cz/pls/kv2014/vysledky_obec?datumvoleb=20141010&cislo_obce=554782'
 		table: praha2014
 		subtitle: 'Volby do zastupitelstva hl. města Prahy'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: 3KOALICE
 #			2: SNOP - Praha
@@ -82,14 +123,14 @@ parameters:
 #			4: Republika pro Prahu
 #			5: Romská demokratická strana
 #			6: LEV 21 - Národní socialisté
-			7: Svobodni
+#			7: Svobodni
 #			8: RESTART 2014
 			9: KSCM
 #			10: DOMOV
-			11: Usvit
+#			11: Usvit
 #			12: PATRIOTI
 #			13: Společnost proti developerské výstavbě v Prokopském údolí
-			14: ProPrahu(14)
+#			14: ProPrahu(14)
 #			15: Nezavisli
 #			16: Hnutí občanů Prahy
 #			17: Konzervativní aliance 2014
@@ -98,24 +139,25 @@ parameters:
 #			20: ROZUMNÍ
 #			21: Řešení pro Prahu
 #			22: Národní kongres
-			23: Kasl
+#			23: Kasl
 			24: ODS
 			25: TOP09
 #			26: OBRODA
 #			27: Strana Práv Občanů
 #			28: Občanská konzervativní strana
-			29: PROPRAHU(29)
+#			29: PROPRAHU(29)
 #			30: Cibulka
-#			31: Koruna česká 			
+#			31: Koruna česká
 	senat2014:
 		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
-		table: senat2014kolo1			
-	senatPraha22014: 
+		table: senat2014kolo1
+	senatPraha22014:
 		typ: senatni
 		nastaveni: senat2014
 		title: Senátní volby v Praze 5 2014
 		obvod: 21
 		subtitle: 'Senát parlamentu - obvod Praha 5'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Petrov
 			2: Solis
@@ -128,12 +170,13 @@ parameters:
 			9: Jančik
 			10: Zacek
 			11: Stech
-	senatPraha12014: 
+	senatPraha12014:
 		typ: senatni
 		nastaveni: senat2014
 		title: Senátní volby v Praze 1 2014
 		obvod: 27
 		subtitle: 'Senát parlamentu - obvod Praha 1'
+		publikovat: 5 # kazdych 5 procent
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Kasal
 			2: Guslbauerova
@@ -146,17 +189,18 @@ parameters:
 			9: Hampl
 			10: Docekal
 			11: Chromíková
-			12: Rykl			
-			13: Mladek			
+			12: Rykl
+			13: Mladek
 			14: Janackova
 			15: Jurinova
-	senatKladno2014: 
+	senatKladno2014:
 		typ: senatni
 		nastaveni: senat2014
 		title: Senátní volby v Kladně 2014
 		obvod: 30
 		subtitle: 'Senát parlamentu - obvod Kladno'
-		zobrazit: #zkratky co nejkratsi, jdou do tweetu						
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Kasal
 			2: Cervan
 			3: Landa
@@ -166,4 +210,4 @@ parameters:
 			7: Vojtova
 			8: Stehlik
 			9: Sramkova
-			10: Dienstbier		
+			10: Dienstbier

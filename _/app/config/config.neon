@@ -31,27 +31,26 @@ common:
 			subtitle: 'Miloš Zeman (MZ) vs Karel Schwarzenberg (KS)'
 		poslaneckaSnemovna2013:
 			typ: parlament # bude nekolik typu
-#			volbyUrl: 'http://volby.cz/pls/ps2013/vysledky'
-			volbyUrl: http://localhost/volbyonline/ps2013.xml
+			volbyUrl: 'http://volby.cz/pls/ps2013/vysledky'
+#			volbyUrl: http://localhost/volbyonline/ps2013.xml
 			table: poslaneckasnemovna2013
 			publikovat: 5 # kazdych 5 procent
 			startDen: "26.10.2013"
-#			startCas: "14:00"
-			startCas: "01:00"
+			startCas: "14:00"
 			title: 'Poslanecká sněmovna 2013'
 			subtitle: 'Předčasné volby do parlamentu'
 			zobrazit: #zkratky co nejkratsi, jdou do tweetu
-				1: ČSSD
+				1: CSSD
 				2: SSO
-				3: ČPS
+				3: Pirati
 				4: TOP 09
 #				5: HV
 				6: ODS
 #				9: ZMENA
-				11: KDU-ČSL
+				11: KDU-CSL
 #				13: Suverenita
 				15: SPOZ
-				17: Úsvit
+				17: Usvit
 				20: ANO
 				21: KSČM
 				23: SZ
@@ -64,12 +63,14 @@ common:
 			subtitle: 'Volby do zastupitelstev obcí a do Senátu Parlamentu ČR konané dne 10.10. – 11.10.2014'
 			multi:				
 				praha2014: Zastupitelstvo hlavního města Prahy
-				brno2014: Zastupitelstvo statutárního města Brna				
+				brno2014: Zastupitelstvo statutárního města Brna
+				brnostred2014: Zastupitelstvo statutárního města Brna-střed
 				senatPraha12014: Volby do Senátu v Praze 1
 				senatPraha22014: Volby do Senátu v Praze 5
 				senatKladno2014: Volby do Senátu v Kladně
 				vsetin2014: Zastupitelstvo města Vsetína
 				prostejov2014: Zastupitelstvo statutárního města Prostějova
+				litovel2014: Zastupitelstvo statutárního města Litovel
 				premyslovice2014: Zastupitelstvo obce Přemyslovice
 	php:
 		date.timezone: Europe/Prague
