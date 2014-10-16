@@ -12,7 +12,7 @@ class VolbyPresenter extends BasePresenter
 {
 
 	private $parameters;
-	private $xmlSenatu = null;
+	private $xmlSenatu = null;	
 
 	protected function startup() {
 		parent::startup();
@@ -120,6 +120,10 @@ class VolbyPresenter extends BasePresenter
 	}
 
 	private function publikujTweet($tweet) {
+
+		if(!empty($this->parameters['twitter']['ignoreSend'])) {
+			return true;
+		}
 
 		$tweet = substr($tweet, 0, 140);
 
@@ -392,20 +396,33 @@ class VolbyPresenter extends BasePresenter
 
 		// dump($parameters['multi']);
 
-		$nactenyDataSenatu = false;
-
 		$status = array();
 
 		foreach ($parameters['multi'] as $key => $value) {
+
+			if ($key == '---') {
+				continue;
+			}
+
+			if ($key == '--') {
+				continue;
+			}
+
+
+
 			$multivolby = $this->parameters[$key];			
+			// dump($multivolby);
+
+			if (!empty($multivolby['cron']) && $multivolby['cron'] == 'ne') {
+				continue;
+			}
 
 			switch ($multivolby['typ']) {
 				case "komunalni":
 				$status[] = $this->komunalni($multivolby);
 				break;
 				case "senatni":
-				$status[] = $this->senatni($multivolby, $nactenyDataSenatu);
-				$nactenyDataSenatu = true;
+				$status[] = $this->senatni($multivolby);
 				break;
 			}
 		}
@@ -415,22 +432,31 @@ class VolbyPresenter extends BasePresenter
 	}
 
 	/**
-	* kontorla casu, zda se uz muze graber spustit
+	* kontrola casu, zda se uz muze graber spustit
+	* - vysledky musi byt spocitany do 24 hodin, tj. 
+	* 1 den od 14:00 do 24:00
+	* 2 den od 00:00 do 14:00
 	*/
 	private function kontrola($parameters) {
-		// TODO - PREHODIT KONTROLY DO FCE
-		$dnesTed = new DateTime();
-
-		// je spravne datum?
+		$startCas = $parameters['startCas'];
+		$dnesTed = new DateTime();		
 		$startDen = new DateTime($parameters['startDen']);
-		if ($dnesTed->format("Y-m-d") <> $startDen->format("Y-m-d")) {
-			return 'nenastal den scitani voleb, tj. '.$parameters['startDen'].'...';
-		}
+		$druhyDen = clone $startDen;
+		$druhyDen->modify('+1 day');
+		if ($dnesTed->format("Y-m-d") <> $druhyDen->format("Y-m-d")) {
+			if ($dnesTed->format("Y-m-d") <> $startDen->format("Y-m-d")) {
+				return 'nenastal den scitani voleb, tj. '.$parameters['startDen'].'...';
+			}
 
 		// je spravny cas?
-		$startCas = $parameters['startCas'];
-		if ($dnesTed->format("H:i") < $startCas) {
-			return 'nenastal cas publikovani vysledku voleb...';
+			
+			if ($dnesTed->format("H:i") < $startCas) {
+				return 'nenastal cas publikovani vysledku voleb...';
+			}
+		} else {
+			if ($dnesTed->format("H:i") > $startCas) {
+				return 'skončila zákonná lhůta pro spočítání výsledků voleb...';
+			}			
 		}
 
 		// $volby = $this->getService('database')->table($parameters['table']);;
@@ -545,41 +571,55 @@ class VolbyPresenter extends BasePresenter
 	/**
 	* XML graber pro senatni volby, odvozen od prezidentskych
 	*/
-	private function senatni($parameters, $nactenyDataSenatu) {
+	private function senatni($parameters) {	
 
 		// NACIST NASTAVENI SENATNICH VOLEB = VSECHNY OBVODY MAJI SHODNY XML
 		$kdeNajduNastaveniSenatu = $parameters['nastaveni'];		
 		$nastaveniSenatu = $this->parameters[$kdeNajduNastaveniSenatu];		
+		// dump($nastaveniSenatu);
+
+		if (!empty($nastaveniSenatu['cron']) && $nastaveniSenatu['cron'] == 'ne') {
+			return 'volby ignorovany...';
+		}
 
 		$volby = $this->getService('database')->table($nastaveniSenatu['table']);
 		$hledamPosledniTweet = clone $volby;
 		$posledniTweet = $hledamPosledniTweet->where('tweet', '1')->where('obvod_cislo', $parameters['obvod'])->order('datumcas DESC')->fetch();
 
 		if (!empty($posledniTweet) && intval($posledniTweet->zpracovano) >= 100) {
-			return 'volby skoncili...';
+			return 'volby skoncily...';
 		}
 
-		if (!$nactenyDataSenatu) {
-			// dump($parameters['volbyUrl']);
+		if (!$this->xmlSenatu) {
 			$content = file_get_contents($nastaveniSenatu['volbyUrl']);
 
 			$this->xmlSenatu = simplexml_load_string($content);	
 		}
+		// dump($this->xmlSenatu);exit;
 		$xml = $this->xmlSenatu;
 
 		foreach($xml as $obvod){
 			if ($obvod['CISLO'] == $parameters['obvod']) {
+				// dump($obvod);exit;
 
 				$insertData = array();
 
 				$insertData['obvod_cislo'] = (int)$obvod['CISLO'];
 				$insertData['obvod_nazev'] = (string)$obvod['NAZEV'];
 
-				$ucast = $obvod->UCAST['UCAST_PROC'];
-				$insertData['ucast'] = str_replace(",", '.', $ucast);
-
-				$zpracovano = $obvod->UCAST['OKRSKY_ZPRAC_PROC'];
+				$ucast = 0;
+				$zpracovano = 0;
+				foreach($obvod->UCAST as $ucastTmp) {
+					if($ucastTmp['KOLO'] == $nastaveniSenatu['kolo']) {
+						$ucast = $ucastTmp['UCAST_PROC'];		
+						$zpracovano = $ucastTmp['OKRSKY_ZPRAC_PROC'];
+					}
+				}
+				
+				$insertData['ucast'] = str_replace(",", '.', $ucast);				
 				$insertData['zpracovano'] = str_replace(",", '.', $zpracovano);
+
+				// dump($insertData);exit;
 
 				$poradi = array();
 
@@ -588,9 +628,15 @@ class VolbyPresenter extends BasePresenter
 					//var_dump($elemStrana['NAZ_STR']);
 
 					$stranaId = (int)$elemStrana['PORADOVE_CISLO'];
-					$procento = (float)$elemStrana['HLASY_PROC_1KOLO'];
+					// $procento = (float)$elemStrana['HLASY_PROC_1KOLO']; // pro prvni kolo		
+					$procento = 0;
+					if (isset($elemStrana['HLASY_PROC_'.$nastaveniSenatu['kolo'].'KOLO'])) {			
+						$procento = (float)$elemStrana['HLASY_PROC_'.$nastaveniSenatu['kolo'].'KOLO']; // pro druhe kolo
+					}
 
 					if ($procento >= 5) { // limit pro postup do zastupitelstva
+						// dump($parameters['zobrazit'][$stranaId]);
+						// dump($procento);
 						$poradi[(string)$procento] = $parameters['zobrazit'][$stranaId];	
 					}
 

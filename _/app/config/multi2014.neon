@@ -6,6 +6,7 @@ parameters:
 		table: prostejov2014
 		subtitle: 'Volby do zastupitelstva obce Prostějov'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: Moravané
 #			2: Koruna česká
@@ -26,6 +27,7 @@ parameters:
 		table: brno2014
 		subtitle: 'Volby do zastupitelstva obce Brno'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: Antibursík
 			2: KSCM
@@ -51,6 +53,7 @@ parameters:
 		table: brnostred2014
 		subtitle: 'Volby do zastupitelstva obce Brno-střed'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: KDU-CSL
 			2: Zeleni
@@ -71,6 +74,7 @@ parameters:
 		table: litovel2014
 		subtitle: 'Volby do zastupitelstva obce Litovel'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: SNK-OSL
 			2: KDU-CSL
@@ -87,6 +91,7 @@ parameters:
 		table: vsetin2014
 		subtitle: 'Volby do zastupitelstva obce Vsetín'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 #			1: SSO
 			2: ODS
@@ -105,6 +110,7 @@ parameters:
 		table: premyslovice2014
 		subtitle: 'Volby do zastupitelstva obce Přemyslovice'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: Nezavisli
 			2: NezavisliProPremyky
@@ -116,6 +122,7 @@ parameters:
 		table: praha2014
 		subtitle: 'Volby do zastupitelstva hl. města Prahy'
 		publikovat: 5 # kazdych 5 procent
+		cron: ne		
 		zobrazit: #zkratky co nejkratsi, jdou do tweetu
 			1: 3KOALICE
 #			2: SNOP - Praha
@@ -151,7 +158,9 @@ parameters:
 	senat2014:
 		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
 		table: senat2014kolo1
-	senatPraha22014:
+		cron: ne		
+		kolo: 1
+	senatPraha52014:
 		typ: senatni
 		nastaveni: senat2014
 		title: Senátní volby v Praze 5 2014

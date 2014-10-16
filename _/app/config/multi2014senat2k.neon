@@ -1,0 +1,95 @@
+parameters:
+	senat2k2014:
+		volbyUrl: 'http://www.volby.cz/pls/senat/vysledky?datum_voleb=20141010'
+		table: senat2014kolo2
+		kolo: 2		
+	senat2kPraha52014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Praze 5 2014
+		obvod: 21
+		subtitle: 'Láska vs Žáček'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			5: Laska
+			10: Zacek
+	senat2kPraha12014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Praze 1 2014
+		obvod: 27
+		subtitle: 'Schwarz vs Hampl'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			8: Schwarz
+			9: Hampl
+	senat2kPraha92014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Praze 9 2014
+		obvod: 24
+		subtitle: 'Kladívko vs Baudyšová'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: Kladivko
+			4: Baudysova
+	senat2kKladno2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Kladně 2014
+		obvod: 30
+		subtitle: 'Vojtová vs Dienstbier'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			7: Vojtova
+			10: Dienstbier			
+	senat2kRychnov2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Rychnově nad Kněžnou 2014
+		obvod: 48
+		subtitle: 'Antl vs Řehák'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			3: Antl
+			7: Rehak		
+	senat2kPrerov2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Přerově 2014
+		obvod: 63
+		subtitle: 'Prachař vs Seitlová'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: Prachar
+			5: Seitlova					
+	senat2kLouny2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Lounech 2014
+		obvod: 6
+		subtitle: 'Hamousová vs Chládek'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			3: Hamousova
+			7: Chladek				
+	senat2kPelhrimov2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby v Pelhřimově 2014
+		obvod: 15
+		subtitle: 'Štěch vs Jahelka'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			1: Stech
+			7: Jahelka					
+	senat2kZlin2014:
+		typ: senatni
+		nastaveni: senat2k2014
+		title: Senátní volby ve Zlíně 2014
+		obvod: 78
+		subtitle: 'Čuba vs Gajdůšková'
+		publikovat: 5 # kazdych 5 procent
+		zobrazit: #zkratky co nejkratsi, jdou do tweetu
+			5: Cuba
+			6: Gajduskova

@@ -4,7 +4,13 @@
 
 	<ul>
 	{foreach $multiCasti as $key => $casti}
+		{if $key == '---'}
+		<li><h3>{$casti}</h3></li>
+		{elseif $key == '--'}
+		<li>{$casti}</li>		
+		{else}
 		<li><a n:href="default, $key">{$casti}</a></li>
+		{/if}
 	{/foreach}
 	</ul>
 
